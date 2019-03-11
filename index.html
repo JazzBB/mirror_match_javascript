@@ -1,0 +1,66 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<body>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/html2canvas.js"></script>
+<script src="js/table_insert.js"></script>
+<script type="text/javascript" src="js/jspdf.min.js"></script>
+<script src="js/export.js"></script>
+<script src="js/picker.js"></script>
+ <nav class="horizontal-menu plain">
+	<ul>
+		<li><a href="javascript:void(0)" onclick="export_results()">Verseny exportálása</a></li>
+		<logo>MirrorMatch</logo>
+	</ul>
+</nav>
+	<div class="main_body">
+    <table id="jatekosTabla" class="table order-list">
+    <thead>
+        <tr>
+            <th id="name"><center>Név</center></td>
+            <th id="csapat"><center>Csapat</center></td>
+            <th id="email"><center>E-mail</center></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input type="text" class="form-control" id="jatekos_neve0"/>
+            </td>
+            <td>
+                <input type="text" class="form-control"/>
+            </td>
+            <td>
+                <input type="text" class="form-control"/>
+            </td>
+            <td><a class="deleteRow"></a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" style="text-align: left;">
+              <input type="button" class="add_button" id="addrow" value="Hozzáadás" />
+			  <p>Játékosok száma: <a id="counter"></a></p>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </tfoot>
+</table>
+	</div>
+	<div class="main_body">
+	<table id="parositoTabla">
+	<thead>
+	<input type="button" class="add_button" onclick="PairPicker()" value="Párok sorsolása" id="parosito"/>
+	</thead>
+		<p id="info" style="font-style:italic;"></p>
+	</div>
+	</table>
+</body>
+</head>
+</html>
