@@ -9,6 +9,7 @@
 <script src="js/main.js"></script>
 <script src="js/html2canvas.js"></script>
 <script src="js/table_insert.js"></script>
+<script src="js/verseny_datum.js"></script>
 <script type="text/javascript" src="js/jspdf.min.js"></script>
 <script src="js/export.js"></script>
 <script src="js/picker.js"></script>
@@ -51,16 +52,32 @@
         <tr>
         </tr>
     </tfoot>
-</table>
+	</table>
 	</div>
+	
 	<div class="main_body">
-	<table id="parositoTabla">
+	<table id="parositoTabla" class="table pair-list">
 	<thead>
 	<input type="button" class="add_button" onclick="PairPicker()" value="Párok sorsolása" id="parosito"/>
 	</thead>
-		<p id="info" style="font-style:italic;"></p>
+	</table>
+	</div>
+	
+	<div class="main_body">
+	<table>
+	<td style="font-weight:700;">Fordulók száma: <input type="text" class="fordulo-control" id="fordulok_szama"/></td> <td class="verseny_ideje">A verseny ideje: <a id="verseny_datum"></a></td>
+	</table>
+	</div>
+	
+	<div class="main_body">
+	<table id="pontTabla" class="table point-list" style="table-layout:fixed;">
+	<thead>
+	</thead>
+	<tbody>
+	</tbody>
 	</div>
 	</table>
+	
 </body>
 </head>
 </html>
