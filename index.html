@@ -1,6 +1,7 @@
 <html>
 <meta charset="utf-8"/>
 <head>
+<title>MirrorMatch V0.9.03.18</title>
 <body>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <link rel="stylesheet" type="text/css" href="css/crack.css" />
@@ -14,13 +15,23 @@
 <script type="text/javascript" src="js/jspdf.min.js"></script>
 <script src="js/export.js"></script>
 <script src="js/picker.js"></script>
+<script src="js/kiertekeles.js"></script>
  <nav class="horizontal-menu plain">
 	<ul>
 		<li><a href="javascript:void(0)" onclick="export_results()">Verseny exportálása</a></li>
-		<li><a href="javascript:void(0)" onclick="unlock()">Elemek feloldása</a></li>
+		<li><a href="javascript:void(0)" onclick="#"></a></li>
 		<logo>MirrorMatch</logo>
 	</ul>
 </nav>
+	<div class="main_body_verseny_neve">
+		<center><input type="text" value="Verseny Neve" class="verseny_neve"></center>
+	</div>
+	<div class="main_body">
+	<table>
+	<td style="font-weight:700;">Fordulók száma: <input type="number" min="0" class="fordulo-control" id="fordulok_szama" required="required"/></td> <td class="verseny_ideje">A verseny ideje: <a id="verseny_datum"></a></td>
+	</table>
+	</div>
+	
 	<div class="main_body">
     <table id="jatekosTabla" class="table order-list">
     <thead>
@@ -65,23 +76,36 @@
 	</table>
 	</div>
 	
-	<div class="main_body">
-	<table>
-	<td style="font-weight:700;">Fordulók száma: <input type="text" class="fordulo-control" id="fordulok_szama"/></td> <td class="verseny_ideje">A verseny ideje: <a id="verseny_datum"></a></td>
-	</table>
-	</div>
 	
 	<div class="main_body">
 	<table id="pontTabla" class="table point-list" style="table-layout:fixed;">
-	<thead>
-	</thead>
-	<tbody>
-	</tbody>
-		</table>
+		<thead>
+		</thead>
+			<tbody>
+		</tbody>
+	</table>
+	</div>
+	
+	<div class="main_body_kiertekeles" id="kiertekeles_div">
+	<center><input type="button" class="kiertekeles_button" id="kiertekeles" value="Pontok összegzése"onclick="Kiertekeles()"/></center>
+	<table id="vegeredmenyTabla" class="table result-list" style="table-layout:fixed;">
+		<thead>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	</div>
+	
+	<div class="main_body_kiertekeles_vegleges" id="kiertekeles_div2">
+	<center><h1>TOP 3 játékos</h1></center>
+	<table class="table finalresult-list" style="table-layout:fixed;" id="rendezettVegeredmenyTabla">
+	</table>
 	</div>
 
 	
 	<div><center><img src="img/okflogo2_head.png"></center></div>
+	<div class="egyeb_link"><a href="#" class="egyeb_link">BUG Report</a><a href="https://otkutya.hu" class="egyeb_link"s>Öt Kutya Fogadó</a> </div>
+	<div class="labjegyzet">2019 - Öt Kutya Fogadó</div>
 </body>
 </head>
 </html>
