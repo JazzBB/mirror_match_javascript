@@ -1,3 +1,5 @@
+var added_rows = 1;
+
 $(document).ready(function () {
     var counter = 1;
 	document.getElementById("counter").innerHTML = counter;
@@ -13,6 +15,7 @@ $(document).ready(function () {
         newRow.append(cols);
         $("table.order-list").append(newRow);
         counter++;
+		added_rows = added_rows + 1;
 		document.getElementById("counter").innerHTML = counter;
 		
     });
