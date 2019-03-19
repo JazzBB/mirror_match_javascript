@@ -8,6 +8,12 @@ html {
 	height: 100%;
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+	-webkit-appearance:textfield;
+	appearance:texfield;
+}
+
 body {
 	background: #191919;
 	color: #404040;
@@ -63,15 +69,11 @@ ul {
 	height: 100%;
 	line-height: 50px;
 	text-align: center;
-	transition: background-position 0.2s ease 0s;
 	font-size: 18px;
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.horizontal-menu.plain li a,
-.horizontal-menu.dropdown li > div > a {
-	transition: background-position 1s ease 0s;
-}
+
 
 .horizontal-menu.plain li:not(.active):hover a,
 .horizontal-menu.dropdown li > div > a:hover {
@@ -129,6 +131,33 @@ ul {
 	max-width: 1100px;
 }
 
+.main_body_kiertekeles {
+	background-color: #2c2d2f;
+	color: #BEBEBE;
+	height: auto;
+	margin: 20px auto;
+	max-width: 1100px;
+	display:none;
+}
+
+.main_body_kiertekeles_vegleges {
+	background-color: #2c2d2f;
+	color: #BEBEBE;
+	height: auto;
+	margin: 20px auto;
+	max-width: 1100px;
+	display:none;
+}
+
+.main_body_verseny_neve {
+	background: transparent;
+	color: #BEBEBE;
+	display: block;
+	height: auto;
+	margin: 20px auto;
+	max-width: 1100px;
+}
+
 td{
 	color: #f1f8e9;
 	width: 30%;
@@ -170,7 +199,7 @@ tr,table {
 
 .add_button{
 	color: #000;
-	font-size: 12px;
+	font-size: 14px;
 	padding: 10px;
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
@@ -194,12 +223,32 @@ tr,table {
 .add_button:hover:enabled{
 	background-color: rgba(195, 255, 127, 0.9);
 }
+.kiertekeles_button{
+	color: #000;
+	font-size: 12px;
+	padding: 10px;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	background: #9ccc65;
+	-webkit-box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.6);
+	-moz-box-shadow:    0px 2px 8px rgba(50, 50, 50, 0.6);
+	box-shadow:         0px 2px 8px rgba(50, 50, 50, 0.6);
+	width:25%;
+	border: 0px;
+	float: center;
+}
+
+
+.kiertekeles_button:hover:enabled{
+	background-color: rgba(195, 255, 127, 0.9);
+}
 .form-control{
 	width: 100%;
 	background-color: rgba(108,183,158,0.3);
 	border-style: none;
 	color: #fff;
-	font-size: 13px;
+	font-size: 15px;
 	padding: 2px;
 	text-align:center;
 	}
@@ -243,7 +292,8 @@ tr,table {
 
 .pontszam_td {
 	color: #FFF;
-	font-weight: 700;
+	font-weight: 500;
+	text-align: center;
 }
 
 .point_td_nevek {
@@ -257,4 +307,91 @@ tr,table {
 	text-align: right;
 	font-size: 15px;
 	font-weight: 700;
+}
+
+.okf_logo{
+
+}
+
+.labjegyzet{
+	font-size: 10px;
+	color:#CCC;
+	text-align: center;
+}
+
+.egyeb_link{
+	font-size: 11px;
+	color: #ACACAC;
+	text-align:center;
+	font-weight:700;
+	padding: 10;	
+}
+
+.egyeb_link:hover{
+	color:rgba(143, 247, 213,0.4);
+}
+
+.elso{
+ background: rgba(218,165,32,0.7);
+ color: #111;
+ height: 150px;
+ font-size: 50px;
+ text-align: center;
+}
+
+.masodik{
+ background: rgba(192,192,192,0.7);
+ color: #111;
+ height: 100px;
+  font-size: 50px;
+ text-align: center;
+}
+
+.harmadik{
+ background: rgba(184,115,51,0.7);
+ color: #111;
+  font-size: 50px;
+ text-align: center;
+ text-shadow: 5px;
+}
+
+.final_point_td_nevek{
+	background-color: rgba(122, 227, 171, 0.28);
+	width:10%;
+	text-align: center;
+	color: #FFF;
+}
+
+.final_point_td_helyezes{
+	background-color: rgba(122, 227, 171, 0.1);
+	width:10%;
+	text-align: center;
+	color: #FFF;
+}
+
+.tovabbi_eredmeny{
+	background: rgba(75,75,75.07);
+	padding: 10;
+	text-align: center;
+}
+
+.tovabbi_eredmeny_header{
+	background: rgba(50,50,50.07);
+	padding: 10;
+	text-align: center;
+	font-size: 19px;
+}
+
+.verseny_neve{
+   color: #6CB79E;
+   font-size: 30px;
+   padding-left: 10px;
+   padding-top: 5px;
+   text-shadow: rgba(255,255,255,.5) 0 0 15px, rgba(255,255,255,.5) 0 0 10px;
+   font-family: 'Orbitron', sans-serif;
+   background: transparent;
+   border: 0;
+   width: 100%;
+   display:block;
+   text-align: center;
 }
